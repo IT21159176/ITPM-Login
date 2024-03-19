@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navigator from './Components/navigator';
+import SignInSide from './pages/Loging/login';
+import ResponsiveAppBar from './Components/navigator';
 
 function App() {
   return (
     <>
-    <Navigator/>
+    <ResponsiveAppBar/>
+    <SignInSide />
     </>
     // <BrowserRouter>
     //   <Routes> 

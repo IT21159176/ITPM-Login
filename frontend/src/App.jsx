@@ -1,13 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SignIn from './pages/Loging/login';
-
+import Navigator from './Components/navigator';
 
 function App() {
   return (
     <>
-    <SignIn />
+    <Navigator/>
     </>
     // <BrowserRouter>
     //   <Routes> 

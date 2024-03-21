@@ -7,7 +7,6 @@ import SignUp from './pages/Loging/signup';
 import LabelBottomNavigation from './Components/bottom';
 import Consultantdashb from './pages/consultant/consultantdashb';
 import RecipeReviewCard from './Components/recipeReviewCard';
-
 function App() {
   return (
     <BrowserRouter>

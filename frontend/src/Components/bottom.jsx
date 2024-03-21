@@ -9,6 +9,8 @@ import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import RememberMeOutlinedIcon from '@mui/icons-material/RememberMeOutlined';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
+import HomeIcon from '@mui/icons-material/Home';
+
 export default function LabelBottomNavigation() {
   const [value, setValue] = React.useState('recents');
 
@@ -17,26 +19,31 @@ export default function LabelBottomNavigation() {
   };
 
   return (
-    <BottomNavigation sx={{ width: 1350 }} value={value} onChange={handleChange}>
+    <BottomNavigation
+      sx={{ width: 1650, backgroundColor: '#318CE7' }} // Set background color
+      value={value}
+      onChange={handleChange}
+    >
       <BottomNavigationAction
         label="Home"
         value="home"
-        icon={<HomeOutlinedIcon />}
+        icon={<HomeIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
       <BottomNavigationAction
         label="Business"
         value="business"
-        icon={<BusinessOutlinedIcon />}
+        icon={<BusinessOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
       <BottomNavigationAction
         label="Consultant"
         value="consultant"
-        icon={<RememberMeOutlinedIcon />}
+        icon={<RememberMeOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
       <BottomNavigationAction 
-      label="Employer" 
-      value="employer" 
-      icon={<ManOutlinedIcon />} />
+        label="Employer" 
+        value="employer" 
+        icon={<ManOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
+      />
     </BottomNavigation>
   );
 }

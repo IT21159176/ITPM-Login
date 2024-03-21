@@ -7,6 +7,11 @@ import SignUp from './pages/Loging/signup';
 import LabelBottomNavigation from './Components/bottom';
 import Consultantdashb from './pages/consultant/consultantdashb';
 import RecipeReviewCard from './Components/recipeReviewCard';
+import { BottomNavigation, BottomNavigationAction } from '@mui/material';
+import AccRegister from './pages/Business/AccRegister';
+import Bus_Homepage from './pages/Business/Bus_Homepage';
+import BusinessRegisterForm from './pages/Business/AccRegister';
+import HomePage from './pages/Business/Bus_Homepage';
 
 function App() {
   return (
@@ -17,8 +22,17 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/consultantdashb' element={<Consultantdashb />} />
         <Route path='/recipeReviewCard' element={<RecipeReviewCard />} />
-      
+        <Route path='/accRegister' element={<BusinessRegisterForm />} />
+        <Route path='/homepage' element={<HomePage />} />
       </Routes>
+      
+      
+      
+      
+      
+      
+      
+      
     </BrowserRouter>
   );
   

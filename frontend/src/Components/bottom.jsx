@@ -16,29 +16,6 @@ export default function LabelBottomNavigation() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'crnter', position: 'fixed', bottom: 0, width: '100%' , zIndex: 1000, }}>
-      <BottomNavigation sx={{ width: 4000 }} value={value} onChange={handleChange}>
-        <BottomNavigationAction
-          label="Home"
-          value="home"
-          icon={<HomeOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          label="Business"
-          value="business"
-          icon={<BusinessOutlinedIcon />}
-        />
-        <BottomNavigationAction
-          label="Consultant"
-          value="consultant"
-          icon={<RememberMeOutlinedIcon />}
-        />
-        <BottomNavigationAction 
-          label="Employer" 
-          value="employer" 
-          icon={<ManOutlinedIcon />} 
-        />
-      </BottomNavigation>
-    </div>
     <BottomNavigation
       sx={{ width: 1650, backgroundColor: '#318CE7' }} // Set background color
       value={value}
@@ -65,5 +42,6 @@ export default function LabelBottomNavigation() {
         icon={<ManOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
     </BottomNavigation>
+    </div >
   );
 }

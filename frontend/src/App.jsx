@@ -8,6 +8,12 @@ import RecipeReviewCard from './Components/recipeReviewCard';
 import Ge_skill from './pages/General/Ge_skill';
 
 
+import { BottomNavigation, BottomNavigationAction } from '@mui/material';
+import AccRegister from './pages/Business/AccRegister';
+import Bus_Homepage from './pages/Business/Bus_Homepage';
+import BusinessRegisterForm from './pages/Business/AccRegister';
+import HomePage from './pages/Business/Bus_Homepage';
+
 function App() {
   return (
    
@@ -18,11 +24,16 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/consultantdashb' element={<Consultantdashb />} />
         <Route path='/recipeReviewCard' element={<RecipeReviewCard />} />
+
         <Route path='/header' element={<header/>} />
 
         <Route path='/gehome' element={<Ge_Home />} />
         <Route path='/Ge_skill'element={<Ge_skill/>} />
       
+
+        <Route path='/accRegister' element={<BusinessRegisterForm />} />
+        <Route path='/homepage' element={<HomePage />} />
+
       </Routes>
     </BrowserRouter>
 

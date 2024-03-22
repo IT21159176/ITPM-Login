@@ -165,7 +165,7 @@ const Ge_Profile = () => {
           required
         />   
       </div>
-      <button style={buttonStyle} type="submit">Register</button>
+      <button style={buttonStyle} type="submit"> Create profile </button>
       <br></br>
     </form>
     <br /><br />

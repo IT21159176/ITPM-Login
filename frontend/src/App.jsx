@@ -14,6 +14,7 @@ import BusinessRegisterForm from './pages/Business/AccRegister';
 import HomePage from './pages/Business/Bus_Homepage';
 import ConsultantProfileForm from './Components/consultantProfileForm';
 import LabelBottomNavigation from './Components/bottom';
+import Ge_SideBar from './/pages/General/Ge_Component/Ge_SideBar';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path='/createprofile' element={<Createprofile/>} />
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
         <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
+        <Route path='/Ge_SideBar' element={<Ge_SideBar/>} />
 
 
         <Route path='/gehome' element={<Ge_Home />} />

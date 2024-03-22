@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import ResponsiveAppBar from './Components/Navigator';
 import LabelBottomNavigation from '../../Components/bottom';
@@ -11,6 +10,8 @@ const BusinessRegisterForm = () => {
     password: '',
     confirmPassword: '',
     industry: '',
+    description: '',
+    bio: '',
   });
 
   const handleChange = (e) => {
@@ -44,7 +45,7 @@ const BusinessRegisterForm = () => {
        
             <br></br>
             <br />
-            <br /><br /><br />
+            <br /><br />
 
     <form style={formStyle} onSubmit={handleSubmit}>
       <div style={inputContainer}>
@@ -75,42 +76,6 @@ const BusinessRegisterForm = () => {
         />
       </div>
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="email">Email:</label>
-        <input
-          style={inputStyle}
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="password">Password:</label>
-        <input
-          style={inputStyle}
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-          style={inputStyle}
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div style={inputContainer}>
         <label style={labelStyle} htmlFor="industry">Industry:</label>
         <input
           style={inputStyle}
@@ -122,10 +87,32 @@ const BusinessRegisterForm = () => {
           required
         />
       </div>
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="description">Description:</label>
+        <textarea
+          style={inputStyle}
+          id="description"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="bio">Bio:</label>
+        <textarea
+          style={inputStyle}
+          id="bio"
+          name="bio"
+          value={formData.bio}
+          onChange={handleChange}
+          required
+        />
+      </div>
       <button style={buttonStyle} type="submit">Register</button>
       <br></br>
     </form>
-    <br /><br />
+    <br /><br /><br /><br />
 
     <LabelBottomNavigation/>
 
@@ -140,9 +127,7 @@ const formStyle = {
   maxWidth: '550px',
   margin: 'auto',
   borderRadius: '20px',
-  backgroundColor: '#41C9E2',
-  
-  
+  backgroundColor: '#B4BDFF',
 };
 
 const inputContainer = {
@@ -168,7 +153,7 @@ const buttonStyle = {
   padding: '0.5rem 1rem',
   borderRadius: '4px',
   border: 'none',
-  backgroundColor: '#9ADE7B',
+  backgroundColor: '#007bff',
   color: '#fff',
   cursor: 'pointer',
   fontSize: '1rem',
@@ -176,7 +161,7 @@ const buttonStyle = {
 
 const imagePreview = {
   maxWidth: '50%',
-  height: '160px',
+  height: '200px',
   marginTop: '0.5rem',
   borderRadius: '100%',
   display: 'flex',

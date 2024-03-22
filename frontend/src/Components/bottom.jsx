@@ -2,7 +2,6 @@ import * as React from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import RememberMeOutlinedIcon from '@mui/icons-material/RememberMeOutlined';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
 import HomeIcon from '@mui/icons-material/Home';

@@ -4,6 +4,7 @@ import Ge_post from './Ge_post';
 import LabelBottomNavigation from '../../Components/bottom';
 import Ge_SideBar from './Ge_Component/Ge_SideBar';
 
+
 export default function Ge_Home() {
   const [activeButton, setActiveButton] = useState(null);
 
@@ -17,6 +18,7 @@ export default function Ge_Home() {
       <Ge_Header />
       <Ge_SideBar activeButton={activeButton} handleClick={handleClick} />
       <LabelBottomNavigation />
+
 
       <div style={mainContentStyle}>
         <div style={postsContainerStyle}>

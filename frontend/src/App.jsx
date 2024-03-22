@@ -13,7 +13,6 @@ import Createprofile from './pages/consultant/createprofile';
 import BusinessRegisterForm from './pages/Business/AccRegister';
 import HomePage from './pages/Business/Bus_Homepage';
 import BusinessPostView from './pages/Business/Bus_postview';
-import BusAddPost from './pages/Business/BusAddPost';
 import BusinessAdForm from './pages/Business/BusAddPost';
 import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';

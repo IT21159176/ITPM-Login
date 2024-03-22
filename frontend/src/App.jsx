@@ -13,17 +13,14 @@ import Createprofile from './pages/consultant/createprofile';
 import BusinessRegisterForm from './pages/Business/AccRegister';
 import HomePage from './pages/Business/Bus_Homepage';
 import BusinessPostView from './pages/Business/Bus_postview';
-import BusAddPost from './pages/Business/BusAddPost';
 import BusinessAdForm from './pages/Business/BusAddPost';
 import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
-
-
-
-
 import ConsultantProfileForm from './Components/consultantProfileForm';
 import Editconprofile from './Components/editconprofile';
 import Editconsultantprofile from './pages/consultant/editconsultantprofile';
+import EditBusinessprofile from './pages/Business/EditBusinessProf';
+import BusDashboardPage from './pages/Business/BusAnalyticsDash';
 
 
 function App() {
@@ -59,6 +56,8 @@ function App() {
         <Route path='/busaddpost' element={<BusinessAdForm />} />
         <Route path='/busaddpostedite' element={<BusinessAdedite />} />
         <Route path='/businessfeed' element={<BusinessFeed />} />
+        <Route path='/buseditprofile' element={<EditBusinessprofile />} />
+        <Route path='/busanalyticsdash' element={<BusDashboardPage />} />
 
       </Routes>
     </BrowserRouter>

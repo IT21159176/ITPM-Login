@@ -6,6 +6,7 @@ import RememberMeOutlinedIcon from '@mui/icons-material/RememberMeOutlined';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from 'react-router-dom';
+import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 export default function LabelBottomNavigation() {
   
@@ -45,7 +46,14 @@ const navigate = useNavigate();
         value="employer" 
         icon={<ManOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
+      <BottomNavigationAction 
+        label="Brightness2Icon" 
+        value="brightness2Icon" 
+        icon={<Brightness2Icon sx={{ fontSize: 30 }} />} // Increase icon size
+      />
     </BottomNavigation>
+    
+    
     </div >
   );
 }

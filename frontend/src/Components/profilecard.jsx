@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Edit, CloudDownload } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const Frame = ({ children }) => (
   <Box
@@ -59,8 +60,9 @@ const ProfilePhoto = ({ photoUrl, handlePhotoUpload }) => (
   );
 
 export default function Types() {
+  
+  const navigate = useNavigate ();
   const [photoUrl, setPhotoUrl] = React.useState('');
-
   const handlePhotoUpload = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -119,6 +121,8 @@ export default function Types() {
         startIcon={<Edit />}
         size="small"
         style={{ marginRight: '10px', marginBottom: '10px' }}
+        onClick={()=> navigate('/Editconsultantprofile')}
+        
       >
         Edit Profile
       </Button>

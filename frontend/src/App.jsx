@@ -13,7 +13,8 @@ import Createprofile from './pages/consultant/createprofile';
 import BusinessRegisterForm from './pages/Business/AccRegister';
 import HomePage from './pages/Business/Bus_Homepage';
 import ConsultantProfileForm from './Components/consultantProfileForm';
-import LabelBottomNavigation from './Components/bottom';
+import Editconprofile from './Components/editconprofile';
+import Editconsultantprofile from './pages/consultant/editconsultantprofile';
 
 
 function App() {
@@ -29,7 +30,11 @@ function App() {
         <Route path='/header' element={<header/>} />
         <Route path='/createprofile' element={<Createprofile/>} />
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
-        <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
+        <Route path='/Editconprofile' element={<Editconprofile/>} />
+        <Route path='/Editconsultantprofile' element={<Editconsultantprofile/>} />
+
+
+
 
 
         <Route path='/gehome' element={<Ge_Home />} />

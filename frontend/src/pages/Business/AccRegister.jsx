@@ -45,7 +45,7 @@ const BusinessRegisterForm = () => {
        
             <br></br>
             <br />
-            <br /><br />
+            <br /><br /><br /><br /><br />
 
     <form style={formStyle} onSubmit={handleSubmit}>
       <div style={inputContainer}>
@@ -70,6 +70,18 @@ const BusinessRegisterForm = () => {
           type="text"
           id="businessName"
           name="businessName"
+          value={formData.businessName}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="Email">Email:</label>
+        <input
+          style={inputStyle}
+          type="text"
+          id="Email"
+          name="Email"
           value={formData.businessName}
           onChange={handleChange}
           required

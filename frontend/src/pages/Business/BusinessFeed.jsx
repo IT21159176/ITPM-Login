@@ -18,7 +18,7 @@ export default function Consultantdashb() {
           <div style={{ maxHeight: 'calc(100vh - 64px)', overflowY: 'auto' }}>
           </div>
         </div>
-        <div style={{ flex: 2, overflowY: 'auto', paddingRight: '300px', paddingLeft: '100px'  }}>
+        <div style={{ flex: 5, overflowY: 'auto', paddingRight: '200px', paddingLeft: '20 px'  }}>
           <div style={{ maxHeight: 'calc(100vh - 64px)', overflowY: 'auto' }}>
             <RecipeReviewCard/>
             <br />

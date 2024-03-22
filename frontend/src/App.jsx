@@ -16,12 +16,14 @@ import BusinessPostView from './pages/Business/Bus_postview';
 import BusinessAdForm from './pages/Business/BusAddPost';
 import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
-
-
-
-
 import ConsultantProfileForm from './Components/consultantProfileForm';
+
 import LabelBottomNavigation from './Components/bottom';
+
+
+import EditBusinessprofile from './pages/Business/EditBusinessProf';
+import BusDashboardPage from './pages/Business/BusAnalyticsDash';
+
 
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
         <Route path='/busaddpost' element={<BusinessAdForm />} />
         <Route path='/busaddpostedite' element={<BusinessAdedite />} />
         <Route path='/businessfeed' element={<BusinessFeed />} />
+        <Route path='/buseditprofile' element={<EditBusinessprofile />} />
+        <Route path='/busanalyticsdash' element={<BusDashboardPage />} />
 
       </Routes>
     </BrowserRouter>

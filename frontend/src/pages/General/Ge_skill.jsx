@@ -5,56 +5,28 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import Ge_Header from './Ge_Component/Ge_Header';
 import LabelBottomNavigation from '../../Components/bottom' ;
+import { Link } from 'react-router-dom';
 
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'C',
-    width: '33%',
+    url:'https://img-b.udemycdn.com/course/750x422/700012_a499_9.jpg',
+    title:'c',
+    width: '20%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
+    url: 'https://itsagar.com/assets/v3/images/page/cpp-programming.webp',
     title: 'C++',
-    width: '33%',
+    width: '20%',
   },
   {
-    url: '/static/images/buttons/camera.jpg',
+    url: 'https://5.imimg.com/data5/QQ/CT/AO/GLADMIN-25397883/selection-064-500x500.png',
     title: 'Java',
-    width: '33%',
+    width: '20%',
   },
-  {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: ' Javascript',
-    width: '33%',
-  },
-  {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Python',
-    width: '33%',
-  },
-  {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Kotlin',
-    width: '33%',
-  },
-  {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'C#',
-    width: '33%',
-  },
-  {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Swift',
-    width: '33%',
-  },
-  {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'TypeScript',
-    width: '33%',
-  },
-];
+    
 
+]
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 200,
@@ -78,10 +50,10 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
 
 const ImageSrc = styled('span')({
   position: 'absolute',
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
+  left: 10,
+  right: 10,
+  top: 10,
+  bottom: 10,
   backgroundSize: 'cover',
   backgroundPosition: 'center 40%',
 });
@@ -90,7 +62,7 @@ const Image = styled('span')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   right: 0,
-  top: 0,
+  top:0,
   bottom: 0,
   display: 'flex',
   alignItems: 'center',
@@ -124,7 +96,10 @@ export default function ButtonBaseDemo() {
     <>
     <Ge_Header />
     <LabelBottomNavigation />
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Link to={'https://www.geeksforgeeks.org/c-plus-plus/'}>
+    <Box 
+    sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}
+    >
       {images.map((image) => (
         <ImageButton
           focusRipple
@@ -154,6 +129,7 @@ export default function ButtonBaseDemo() {
         </ImageButton>
       ))}
     </Box>
+    </Link>
     </>
   );
 }

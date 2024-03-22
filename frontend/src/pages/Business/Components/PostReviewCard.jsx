@@ -7,6 +7,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import EditIcon from '@mui/icons-material/Edit';
+import CommentIcon from '@mui/icons-material/Comment';
+import DeleteIcon from '@mui/icons-material/Delete';
 import ResponsiveAppBar from './Navigator';
 
 const RecipeReviewCard = () => {
@@ -17,12 +20,10 @@ const RecipeReviewCard = () => {
   };
 
   return (
-
     <div
       style={{
         maxWidth: '800px',
-        
-        border : '2px solid #512B81',
+        border: '2px solid #512B81',
         margin: 'auto',
         borderRadius: '10px'
       }}
@@ -32,7 +33,7 @@ const RecipeReviewCard = () => {
           display: 'flex',
           alignItems: 'Right',
           backgroundColor: '#f5f5f5',
-          padding: '2px',
+          padding: '8px',
           borderRadius: '50px',
         }}
       >
@@ -81,13 +82,19 @@ const RecipeReviewCard = () => {
           padding: '10px',
           backgroundColor: '#f5f5f5',
           borderRadius: '10px',
-          backgroundColor: '#80B3FF',
+          backgroundColor: '#2E8A99',
           innerHeight: '1px',
-          
+          outerHeight: '0px',
         }}
       >
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton aria-label="edit">
+          <EditIcon />
+        </IconButton>
+        <IconButton aria-label="delete">
+          <DeleteIcon />
+        </IconButton>
+        <IconButton aria-label="comment">
+          <CommentIcon />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />
@@ -136,8 +143,6 @@ const RecipeReviewCard = () => {
         </Typography>
       </div>
     </div>
-
-    
   );
 }
 

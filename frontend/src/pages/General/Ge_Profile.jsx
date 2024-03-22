@@ -87,6 +87,60 @@ const Ge_Profile = () => {
           required
         />
       </div>
+
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="Education">Education:</label>
+        <input
+          style={inputStyle}
+          type="Education"
+          id="Education"
+          name="Education"
+          value={formData.Education}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="Bio">Bio:</label>
+        <input
+          style={inputStyle}
+          type="Bio"
+          id="Bio"
+          name="Bio"
+          value={formData.Bio}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="skills">Skills:</label>
+        <input
+          style={inputStyle}
+          type="skills"
+          id="skills"
+          name="skills"
+          value={formData.skills}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div style={inputContainer}>
+        <label style={labelStyle} htmlFor="Work_Experience">Work Experience:</label>
+        <input
+          style={inputStyle}
+          type="Work_Experience"
+          id="Work_Experience"
+          name="Work_Experience"
+          value={formData.Work_Experience}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+
       <div style={inputContainer}>
         <label style={labelStyle} htmlFor="password">Password:</label>
         <input

@@ -15,6 +15,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EditIcon from '@mui/icons-material/Edit';
+import { useNavigate } from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
   const {  ...other } = props;
@@ -40,6 +41,7 @@ const StyledCard = styled(Card)({
 });
 
 export default function RecipeReviewCard() {
+  const navigate = useNavigate ();
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -92,7 +94,8 @@ export default function RecipeReviewCard() {
             <ExpandMoreIcon />
           </ExpandMore>
           {/* Edit Post Button */}
-          <IconButton aria-label="edit post" style={{ marginLeft: 'auto' }}>
+          <IconButton aria-label="edit post" style={{ marginLeft: 'auto' }}
+             onClick={()=>navigate('/Postedit')}>
             <EditIcon />
           </IconButton>
         </CardActions>

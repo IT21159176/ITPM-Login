@@ -15,7 +15,8 @@ import HomePage from './pages/Business/Bus_Homepage';
 import ConsultantProfileForm from './Components/consultantProfileForm';
 import Editconprofile from './Components/editconprofile';
 import Editconsultantprofile from './pages/consultant/editconsultantprofile';
-
+import Postcreate from './pages/consultant/postcreate';
+import Postedit from './pages/consultant/postedit';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
         <Route path='/Editconprofile' element={<Editconprofile/>} />
         <Route path='/Editconsultantprofile' element={<Editconsultantprofile/>} />
+        <Route path='/postcreate' element={<Postcreate/>} />
+        <Route path='/postedit' element={<Postedit/>} />
 
 
 

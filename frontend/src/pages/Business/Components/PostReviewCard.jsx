@@ -17,11 +17,11 @@ const RecipeReviewCard = () => {
   };
 
   return (
-    
-    
+
     <div
       style={{
-        maxWidth: '700px',
+        maxWidth: '800px',
+        
         border : '2px solid #512B81',
         margin: 'auto',
         borderRadius: '10px'
@@ -30,9 +30,9 @@ const RecipeReviewCard = () => {
       <div
         style={{
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'Right',
           backgroundColor: '#f5f5f5',
-          padding: '10px',
+          padding: '2px',
           borderRadius: '50px',
         }}
       >
@@ -54,7 +54,7 @@ const RecipeReviewCard = () => {
         </IconButton>
       </div>
       <img
-        src="/static/images/cards/paella.jpg"
+        src="https://static-assets.business.amazon.com/assets/in/17th-aug-2022/910_AB_Website_Cover_1450x664_03.jpg.transform/1450x664/image.jpg"
         alt="Paella dish"
         style={{
           width: '100%',

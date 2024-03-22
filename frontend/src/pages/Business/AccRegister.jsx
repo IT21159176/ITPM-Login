@@ -43,6 +43,8 @@ const BusinessRegisterForm = () => {
   <ResponsiveAppBar/>
        
             <br></br>
+            <br />
+            <br /><br /><br />
 
     <form style={formStyle} onSubmit={handleSubmit}>
       <div style={inputContainer}>

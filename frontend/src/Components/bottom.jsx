@@ -5,10 +5,13 @@ import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
 import RememberMeOutlinedIcon from '@mui/icons-material/RememberMeOutlined';
 import ManOutlinedIcon from '@mui/icons-material/ManOutlined';
 import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from 'react-router-dom';
+import Brightness2Icon from '@mui/icons-material/Brightness2';
 
 export default function LabelBottomNavigation() {
+  
   const [value, setValue] = React.useState('home');
-
+const navigate = useNavigate();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -23,7 +26,9 @@ export default function LabelBottomNavigation() {
       <BottomNavigationAction
         label="Home"
         value="home"
-        icon={<HomeIcon sx={{ fontSize: 30 }} />} // Increase icon size
+        icon={<HomeIcon sx={{ fontSize: 30 }} />}
+        onClick={()=> navigate('/gehome')}
+         // Increase icon size
       />
       <BottomNavigationAction
         label="Business"
@@ -33,14 +38,22 @@ export default function LabelBottomNavigation() {
       <BottomNavigationAction
         label="Consultant"
         value="consultant"
-        icon={<RememberMeOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
+        icon={<RememberMeOutlinedIcon sx={{ fontSize: 30 }}  />}
+        onClick={()=> navigate('/consultantdashb')} // Increase icon size
       />
       <BottomNavigationAction 
         label="Employer" 
         value="employer" 
         icon={<ManOutlinedIcon sx={{ fontSize: 30 }} />} // Increase icon size
       />
+      <BottomNavigationAction 
+        label="Brightness2Icon" 
+        value="brightness2Icon" 
+        icon={<Brightness2Icon sx={{ fontSize: 30 }} />} // Increase icon size
+      />
     </BottomNavigation>
+    
+    
     </div >
   );
 }

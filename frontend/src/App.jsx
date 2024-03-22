@@ -9,11 +9,11 @@ import Ge_skill from './pages/General/Ge_skill';
 import Ge_Marketplace from './pages/General/Ge_Marketplace';
 import Ge_Profile from './pages/General/Ge_Profile';
 import Ge_jobSearch from './pages/General/Ge_jobSearch';
-
-
-
+import Createprofile from './pages/consultant/createprofile';
 import BusinessRegisterForm from './pages/Business/AccRegister';
 import HomePage from './pages/Business/Bus_Homepage';
+import ConsultantProfileForm from './Components/consultantProfileForm';
+import LabelBottomNavigation from './Components/bottom';
 
 
 function App() {
@@ -27,6 +27,9 @@ function App() {
         <Route path='/consultantdashb' element={<Consultantdashb />} />
         <Route path='/recipeReviewCard' element={<RecipeReviewCard />} />
         <Route path='/header' element={<header/>} />
+        <Route path='/createprofile' element={<Createprofile/>} />
+        <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
+        <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
 
 
         <Route path='/gehome' element={<Ge_Home />} />

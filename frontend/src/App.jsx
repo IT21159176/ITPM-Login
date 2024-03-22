@@ -18,6 +18,7 @@ import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
 import ConsultantProfileForm from './Components/consultantProfileForm';
 
+
 import LabelBottomNavigation from './Components/bottom';
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/createprofile' element={<Createprofile/>} />
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
         <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
+      
 
 
         <Route path='/gehome' element={<Ge_Home />} />

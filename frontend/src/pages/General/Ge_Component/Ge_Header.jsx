@@ -12,11 +12,14 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
+import ElectricBoltOutlinedIcon from '@mui/icons-material/ElectricBoltOutlined';
 
 const pages = [' Skill Development', ' Job Search', 'Marketplace'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Business profile create', 'Consultant profile create','employer profile create', 'Logout'];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -52,7 +55,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BuzzHub
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -111,15 +114,29 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+           
               <Button
-                key={page}
+                
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+               Skill Development
               </Button>
-            ))}
+              <Button
+               
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Job Search
+              </Button>
+              <Button
+                
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+               Marketplace
+              </Button>
+            
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -144,11 +161,21 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              
+                <MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Business profile create</Typography>
+                </MenuItem>
+                <MenuItem  onClick={()=>navigate('/Createprofile')}>
+                  <Typography textAlign="center">Consultant profile create</Typography>
+                </MenuItem>
+                <MenuItem  onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">employer profile create</Typography>
+                </MenuItem>
+               
+            
             </Menu>
           </Box>
         </Toolbar>

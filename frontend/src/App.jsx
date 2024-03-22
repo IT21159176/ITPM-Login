@@ -18,7 +18,14 @@ import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
 import ConsultantProfileForm from './Components/consultantProfileForm';
 
+
 import LabelBottomNavigation from './Components/bottom';
+
+import Editconprofile from './Components/editconprofile';
+import Editconsultantprofile from './pages/consultant/editconsultantprofile';
+
+import Postcreate from './pages/consultant/postcreate';
+import Postedit from './pages/consultant/postedit';
 
 
 import EditBusinessprofile from './pages/Business/EditBusinessProf';
@@ -39,7 +46,13 @@ function App() {
         <Route path='/header' element={<header/>} />
         <Route path='/createprofile' element={<Createprofile/>} />
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
+
         <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
+
+        <Route path='/Editconprofile' element={<Editconprofile/>} />
+        <Route path='/Editconsultantprofile' element={<Editconsultantprofile/>} />
+        <Route path='/postcreate' element={<Postcreate/>} />
+        <Route path='/postedit' element={<Postedit/>} />
 
 
         <Route path='/gehome' element={<Ge_Home />} />

@@ -41,6 +41,7 @@ export default function LabelBottomNavigation() {
           label="Business"
           value="business"
           icon={<BusinessOutlinedIcon sx={{ fontSize: 30 }} />}
+          onClick={() => navigate('/HomePage')}
         />
         <BottomNavigationAction
           label="Consultant"

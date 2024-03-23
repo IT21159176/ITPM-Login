@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 const pages = [' Skill Development', ' Job Search', 'Marketplace'];
 
 function ResponsiveAppBar() {
+
   const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -115,21 +116,21 @@ function ResponsiveAppBar() {
            
               <Button
                 
-                onClick={handleCloseNavMenu}
+                onClick={()=>navigate('/Ge_skill')}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                Skill Development
               </Button>
               <Button
                
-                onClick={handleCloseNavMenu}
+               onClick={()=>navigate('/Ge_jobSearch')}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 Job Search
               </Button>
               <Button
                 
-                onClick={handleCloseNavMenu}
+                onClick={()=>navigate('/businessfeed')}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                Marketplace
@@ -163,7 +164,7 @@ function ResponsiveAppBar() {
                 <MenuItem  onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-                <MenuItem  onClick={handleCloseUserMenu}>
+                <MenuItem  onClick={()=>navigate('/accRegister')}>
                   <Typography textAlign="center">Business profile create</Typography>
                 </MenuItem>
                 <MenuItem  onClick={()=>navigate('/Createprofile')}>

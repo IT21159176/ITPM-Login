@@ -3,7 +3,8 @@ import Ge_Header from './Ge_Component/Ge_Header';
 import Ge_post from './Ge_post';
 import LabelBottomNavigation from '../../Components/bottom';
 import Ge_SideBar from './Ge_Component/Ge_SideBar';
-
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 export default function Ge_Home() {
   const [activeButton, setActiveButton] = useState(null);
@@ -14,11 +15,11 @@ export default function Ge_Home() {
   };
 
   return (
+    
     <>
       <Ge_Header />
       <Ge_SideBar activeButton={activeButton} handleClick={handleClick} />
       <LabelBottomNavigation />
-
 
       <div style={mainContentStyle}>
         <div style={postsContainerStyle}>
@@ -29,7 +30,13 @@ export default function Ge_Home() {
             <Ge_post />
           </div>
           <div style={postStyle}>
-            <Ge_post />
+        
+
+            <Stack spacing={3} direction="row" down= {10} >
+                <Button variant="contained">update post </Button>
+                <Button variant="outlined"> Edit post </Button>
+             </Stack>
+
           </div>
         </div>
       </div>
@@ -38,10 +45,10 @@ export default function Ge_Home() {
 }
 
 const mainContentStyle = {
-  marginLeft: '220px', // Adjusted to accommodate the width of the sidebar
+  marginLeft: '10px', // Adjusted to accommodate the width of the sidebar
   display: 'flex',
   alignItems: 'flex-start',
-  marginTop: '50px',
+  marginTop: '40px',
 };
 
 const postsContainerStyle = {

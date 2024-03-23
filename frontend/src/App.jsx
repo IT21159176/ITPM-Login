@@ -17,7 +17,10 @@ import BusinessAdForm from './pages/Business/BusAddPost';
 import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
 import ConsultantProfileForm from './Components/consultantProfileForm';
-
+import Ge_EditProfile from './pages/General/Ge_EditProfile';
+import Ge_viewProfiles from './pages/General/Ge_viewProfiles';
+import Ge_post from './pages/General/Ge_post';
+import Ge_MarketplaceList from './pages/General/Ge_MarketPlaceList';
 
 import LabelBottomNavigation from './Components/bottom';
 
@@ -61,7 +64,10 @@ function App() {
         <Route path='/Ge_Marketplace'element={<Ge_Marketplace/>} />
         <Route path='/Ge_Profile'element={<Ge_Profile/>} />
         <Route path='/Ge_jobSearch'element={<Ge_jobSearch/>} />
-
+        <Route path='/Ge_EditProfile'element={<Ge_EditProfile/>} />
+        <Route path='/Ge_viewProfiles'element={<Ge_viewProfiles/>} />
+        <Route path='/Ge_post' element={<Ge_post />} />
+        <Route path='/Ge_MarketplaceList' element={<Ge_MarketplaceList />} />
 
         <Route path='/accRegister' element={<BusinessRegisterForm />} />
         <Route path='/homepage' element={<HomePage />} />

@@ -12,20 +12,48 @@ const images = [
   {
     url:'https://img-b.udemycdn.com/course/750x422/700012_a499_9.jpg',
     title:'c',
-    width: '20%',
+    width: '33%',
   },
   {
     url: 'https://itsagar.com/assets/v3/images/page/cpp-programming.webp',
     title: 'C++',
-    width: '20%',
+    width: '33%',
   },
   {
     url: 'https://5.imimg.com/data5/QQ/CT/AO/GLADMIN-25397883/selection-064-500x500.png',
     title: 'Java',
-    width: '20%',
+    width: '33%',
   },
-    
-
+  {
+    url:'https://img-b.udemycdn.com/course/750x422/700012_a499_9.jpg',
+    title:'c',
+    width: '33%',
+  },
+  {
+    url: 'https://itsagar.com/assets/v3/images/page/cpp-programming.webp',
+    title: 'C++',
+    width: '33%',
+  },
+  {
+    url:'https://img-b.udemycdn.com/course/750x422/700012_a499_9.jpg',
+    title:'c',
+    width: '33%',
+  },
+  {
+    url: 'https://itsagar.com/assets/v3/images/page/cpp-programming.webp',
+    title: 'C++',
+    width: '33%',
+  },
+  {
+    url: 'https://5.imimg.com/data5/QQ/CT/AO/GLADMIN-25397883/selection-064-500x500.png',
+    title: 'Java',
+    width: '33%',
+  },
+  {
+    url: 'https://5.imimg.com/data5/QQ/CT/AO/GLADMIN-25397883/selection-064-500x500.png',
+    title: 'Java',
+    width: '33%',
+  },
 ]
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
@@ -99,6 +127,7 @@ export default function ButtonBaseDemo() {
     <Link to={'https://www.geeksforgeeks.org/c-plus-plus/'}>
     <Box 
     sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}
+    
     >
       {images.map((image) => (
         <ImageButton

@@ -4,7 +4,7 @@ import LabelBottomNavigation from '../../Components/bottom' ;
 
 
 
-const Ge_Profile = () => {
+const Ge_MarketplaceList = () => {
   const [formData, setFormData] = useState({
     profilePicture: '',
     Name: '',
@@ -18,18 +18,6 @@ const Ge_Profile = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      setFormData({ ...formData, profilePicture: reader.result });
-    };
-
-    if (file) {
-      reader.readAsDataURL(file);
-    }
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -49,21 +37,11 @@ const Ge_Profile = () => {
     <form style={formStyle} onSubmit={handleSubmit}>
       <div style={inputContainer}>
             <br />
-        <label style={labelStyle} htmlFor="profilePicture">  Profile Picture:</label>
-        <input
-          style={inputStyle}
-          type="file"
-          id="profilePicture"
-          name="profilePicture"
-          accept="image/*"
-          onChange={handleFileChange}
-        />
-        {formData.profilePicture && (
-          <img src={formData.profilePicture} alt="Profile" style={imagePreview} />
-        )}
       </div>
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Name"> Name:</label>
+        <h7>Market Place</h7>
+      
+        <label style={labelStyle} htmlFor="Name"> Item Name:</label>
         <input
           style={inputStyle}
           type="text"
@@ -75,7 +53,7 @@ const Ge_Profile = () => {
         />
       </div>
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="email">Email:</label>
+        <label style={labelStyle} htmlFor="email">Used/New :</label>
         <input
           style={inputStyle}
           type="email"
@@ -88,7 +66,7 @@ const Ge_Profile = () => {
       </div>
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Education">Education:</label>
+        <label style={labelStyle} htmlFor="Education">Address:</label>
         <input
           style={inputStyle}
           type="Education"
@@ -101,7 +79,7 @@ const Ge_Profile = () => {
       </div>
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Bio">Bio:</label>
+        <label style={labelStyle} htmlFor="Bio">Description:</label>
         <input
           style={inputStyle}
           type="Bio"
@@ -114,7 +92,7 @@ const Ge_Profile = () => {
       </div>
       
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="skills">Skills:</label>
+        <label style={labelStyle} htmlFor="skills">Year of making:</label>
         <input
           style={inputStyle}
           type="skills"
@@ -141,7 +119,7 @@ const Ge_Profile = () => {
 
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="password">Password:</label>
+        <label style={labelStyle} htmlFor="password">Price:</label>
         <input
           style={inputStyle}
           type="password"
@@ -152,19 +130,8 @@ const Ge_Profile = () => {
           required
         />
       </div>
-      <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="confirmPassword">Confirm Password:</label>
-        <input
-          style={inputStyle}
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />   
-      </div>
-      <button style={buttonStyle} type="submit"> Create profile </button>
+     
+      <button style={buttonStyle} type="submit"> list Item </button>
       <br></br>
     </form>
     <br /><br />
@@ -214,13 +181,5 @@ const buttonStyle = {
   fontSize: '1rem',
 };
 
-const imagePreview = {
-  maxWidth: '50%',
-  height: '160px',
-  marginTop: '0.5rem',
-  borderRadius: '100%',
-  display: 'flex',
-  Container: 'center', 
-};
 
-export default Ge_Profile;
+export default Ge_MarketplaceList;

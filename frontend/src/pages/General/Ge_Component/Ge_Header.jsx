@@ -13,10 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
-import ElectricBoltOutlinedIcon from '@mui/icons-material/ElectricBoltOutlined';
 
 const pages = [' Skill Development', ' Job Search', 'Marketplace'];
-const settings = ['Profile', 'Business profile create', 'Consultant profile create','employer profile create', 'Logout'];
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();

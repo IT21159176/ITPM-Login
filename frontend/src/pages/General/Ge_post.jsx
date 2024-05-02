@@ -34,7 +34,7 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 500, width: 500 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -52,7 +52,7 @@ export default function RecipeReviewCard() {
       <CardMedia
         component="img"
         height="194"
-        image="https://th.bing.com/th/id/OIP.Wdf12nhz285PagG0hgvKeAHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        image="https://cdn.theathletic.com/app/uploads/2023/09/19000644/USATSI_21452321-scaled.jpg"
         alt="Paella dish"
       />
       <CardContent>

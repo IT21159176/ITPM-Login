@@ -4,7 +4,7 @@ import LabelBottomNavigation from '../../Components/bottom' ;
 
 
 
-const Ge_Profile = () => {
+const Ge_viewProfile = () => {
   const [formData, setFormData] = useState({
     profilePicture: '',
     Name: '',
@@ -164,10 +164,13 @@ const Ge_Profile = () => {
           required
         />   
       </div>
-      <button style={buttonStyle} type="submit"> Create profile </button>
+      <button style={buttonStyle} type="submit"> update profile </button>
+     
+      <button style={buttonStyle} type="submit"> Delete profile </button>
       <br></br>
     </form>
     <br /><br />
+    
 
     </>
   );
@@ -212,6 +215,7 @@ const buttonStyle = {
   color: '#fff',
   cursor: 'pointer',
   fontSize: '1rem',
+  marginBottom: '6px'
 };
 
 const imagePreview = {
@@ -223,4 +227,4 @@ const imagePreview = {
   Container: 'center', 
 };
 
-export default Ge_Profile;
+export default Ge_viewProfile;

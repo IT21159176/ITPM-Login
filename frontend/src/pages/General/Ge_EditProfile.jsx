@@ -3,8 +3,7 @@ import Ge_Header from './Ge_Component/Ge_Header';
 import LabelBottomNavigation from '../../Components/bottom' ;
 
 
-
-const Ge_Profile = () => {
+const Ge_EditProfile = () => {
   const [formData, setFormData] = useState({
     profilePicture: '',
     Name: '',
@@ -13,10 +12,10 @@ const Ge_Profile = () => {
     confirmPassword: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  function handleChange(e) {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    }
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -49,7 +48,7 @@ const Ge_Profile = () => {
     <form style={formStyle} onSubmit={handleSubmit}>
       <div style={inputContainer}>
             <br />
-        <label style={labelStyle} htmlFor="profilePicture">  Profile Picture:</label>
+        <label style={labelStyle} htmlFor="profilePicture"> Edit Profile Picture:</label>
         <input
           style={inputStyle}
           type="file"
@@ -63,7 +62,7 @@ const Ge_Profile = () => {
         )}
       </div>
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Name"> Name:</label>
+        <label style={labelStyle} htmlFor="Name"> Edit Name:</label>
         <input
           style={inputStyle}
           type="text"
@@ -75,7 +74,7 @@ const Ge_Profile = () => {
         />
       </div>
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="email">Email:</label>
+        <label style={labelStyle} htmlFor="email"> Edit Email:</label>
         <input
           style={inputStyle}
           type="email"
@@ -88,7 +87,7 @@ const Ge_Profile = () => {
       </div>
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Education">Education:</label>
+        <label style={labelStyle} htmlFor="Education">Edit Education:</label>
         <input
           style={inputStyle}
           type="Education"
@@ -101,7 +100,7 @@ const Ge_Profile = () => {
       </div>
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Bio">Bio:</label>
+        <label style={labelStyle} htmlFor="Bio">Edit Bio:</label>
         <input
           style={inputStyle}
           type="Bio"
@@ -114,7 +113,7 @@ const Ge_Profile = () => {
       </div>
       
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="skills">Skills:</label>
+        <label style={labelStyle} htmlFor="skills"> Edit Skills:</label>
         <input
           style={inputStyle}
           type="skills"
@@ -127,7 +126,7 @@ const Ge_Profile = () => {
       </div>
 
       <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="Work_Experience">Work Experience:</label>
+        <label style={labelStyle} htmlFor="Work_Experience">Edit Work Experience:</label>
         <input
           style={inputStyle}
           type="Work_Experience"
@@ -139,19 +138,6 @@ const Ge_Profile = () => {
         />
       </div>
 
-
-      <div style={inputContainer}>
-        <label style={labelStyle} htmlFor="password">Password:</label>
-        <input
-          style={inputStyle}
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </div>
       <div style={inputContainer}>
         <label style={labelStyle} htmlFor="confirmPassword">Confirm Password:</label>
         <input
@@ -223,4 +209,4 @@ const imagePreview = {
   Container: 'center', 
 };
 
-export default Ge_Profile;
+export default Ge_EditProfile;

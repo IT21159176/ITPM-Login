@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Edit, CloudDownload } from '@mui/icons-material';
-
+import { useNavigate } from 'react-router-dom';
 const Frame = ({ children }) => (
   <Box
     sx={{
@@ -59,6 +59,7 @@ const ProfilePhoto = ({ photoUrl, handlePhotoUpload }) => (
   );
 
 const UserProfile = () => {
+  const navigate = useNavigate();
   const [photoUrl, setPhotoUrl] = React.useState('');
 
   const handlePhotoUpload = (e) => {
@@ -119,6 +120,7 @@ const UserProfile = () => {
         startIcon={<Edit />}
         size="small"
         style={{ marginRight: '10px', marginBottom: '10px' }}
+        onClick={()=>navigate('/buseditprofile')}
       >
         Edit Profile
       </Button>

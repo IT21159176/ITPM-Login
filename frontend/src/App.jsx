@@ -17,10 +17,23 @@ import BusinessAdForm from './pages/Business/BusAddPost';
 import BusinessAdedite from './pages/Business/BusEditPost';
 import BusinessFeed from './pages/Business/BusinessFeed';
 import ConsultantProfileForm from './Components/consultantProfileForm';
+import Ge_EditProfile from './pages/General/Ge_EditProfile';
+import Ge_viewProfiles from './pages/General/Ge_viewProfiles';
+import Ge_post from './pages/General/Ge_post';
+import Ge_MarketplaceList from './pages/General/Ge_MarketPlaceList';
+
+import LabelBottomNavigation from './Components/bottom';
+
 import Editconprofile from './Components/editconprofile';
 import Editconsultantprofile from './pages/consultant/editconsultantprofile';
+
+import Postcreate from './pages/consultant/postcreate';
+import Postedit from './pages/consultant/postedit';
+
+
 import EditBusinessprofile from './pages/Business/EditBusinessProf';
 import BusDashboardPage from './pages/Business/BusAnalyticsDash';
+
 
 
 function App() {
@@ -36,11 +49,14 @@ function App() {
         <Route path='/header' element={<header/>} />
         <Route path='/createprofile' element={<Createprofile/>} />
         <Route path='/consultantProfileForm' element={<ConsultantProfileForm/>} />
+
+        <Route path='/LabelBottomNavigation' element={<LabelBottomNavigation/>} />
+      
+
         <Route path='/Editconprofile' element={<Editconprofile/>} />
         <Route path='/Editconsultantprofile' element={<Editconsultantprofile/>} />
-
-
-
+        <Route path='/postcreate' element={<Postcreate/>} />
+        <Route path='/postedit' element={<Postedit/>} />
 
 
         <Route path='/gehome' element={<Ge_Home />} />
@@ -48,7 +64,10 @@ function App() {
         <Route path='/Ge_Marketplace'element={<Ge_Marketplace/>} />
         <Route path='/Ge_Profile'element={<Ge_Profile/>} />
         <Route path='/Ge_jobSearch'element={<Ge_jobSearch/>} />
-
+        <Route path='/Ge_EditProfile'element={<Ge_EditProfile/>} />
+        <Route path='/Ge_viewProfiles'element={<Ge_viewProfiles/>} />
+        <Route path='/Ge_post' element={<Ge_post />} />
+        <Route path='/Ge_MarketplaceList' element={<Ge_MarketplaceList />} />
 
         <Route path='/accRegister' element={<BusinessRegisterForm />} />
         <Route path='/homepage' element={<HomePage />} />

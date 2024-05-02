@@ -11,8 +11,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import CommentIcon from '@mui/icons-material/Comment';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ResponsiveAppBar from './Navigator';
+import { useNavigate } from 'react-router-dom';
 
 const RecipeReviewCard = () => {
+  const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -87,7 +89,9 @@ const RecipeReviewCard = () => {
           outerHeight: '0px',
         }}
       >
-        <IconButton aria-label="edit">
+        <IconButton aria-label="edit"
+         onClick={()=>navigate ('/busaddpostedite')}
+        >
           <EditIcon />
         </IconButton>
         <IconButton aria-label="delete">

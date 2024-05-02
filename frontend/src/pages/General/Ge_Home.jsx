@@ -30,13 +30,9 @@ export default function Ge_Home() {
             <Ge_post />
           </div>
           <div style={postStyle}>
-        
-
-            <Stack spacing={3} direction="row" down= {10} >
-                <Button variant="contained">update post </Button>
-                <Button variant="outlined"> Edit post </Button>
-             </Stack>
-
+          </div>
+          <div style={postStyle}>
+          <Ge_post />
           </div>
         </div>
       </div>

@@ -12,11 +12,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
 const pages = ['ADD POST', 'Analytics Dashboard ', 'BUSINESS Feed'];
 const settings = ['Profile', 'Logout'];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -55,7 +57,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BuzzHub
           </Typography>
   
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -114,15 +116,29 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+               
+                onClick={()=>navigate ('/busaddpost')}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+              ADD POST
               </Button>
-            ))}
+              <Button
+               
+               onClick={()=>navigate ('/busanalyticsdash')}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+               ANALYTICS DASHBOARD
+              </Button>
+              <Button
+               
+               onClick={()=>navigate ('/businessfeed')}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                BUSINESS FEED
+              </Button>
+        
           </Box>
   
           <Box sx={{ flexGrow: 0 }}>

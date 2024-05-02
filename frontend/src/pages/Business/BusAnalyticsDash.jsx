@@ -58,7 +58,7 @@ const BusDashboardPage = () => {
             Sales Chart
           </Typography>
           {/* Replace this with your sales chart component */}
-          <img src="https://queenbeemedia.co/wp-content/uploads/2021/03/Picture4-1080x675.jpg" alt="Sales Chart" style={{ width: '100%' }} />
+          <img src="https://queenbeemedia.co/wp-content/uploads/2021/03/Picture4-1080x675.jpg" alt="Sales Chart" style={{ width: '50%' }} />
         </Paper>
       </Box>
       <Box sx={{ mt: 3 }}>
@@ -67,7 +67,7 @@ const BusDashboardPage = () => {
             Customer Acquisition
           </Typography>
           {/* Replace this with your customer acquisition component */}
-          <img src="https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2022/01/img_61d47ef61df22.png" alt="Customer Acquisition" style={{ width: '100%' }} />
+          <img src="https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2022/01/img_61d47ef61df22.png" alt="Customer Acquisition" style={{ width: '70%' }} />
         </Paper>
       </Box>
     </Box>

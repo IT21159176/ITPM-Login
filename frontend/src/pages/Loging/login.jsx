@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -15,6 +14,9 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import img from '../../assets/1.png';
+import { useState } from 'react';
+import axios from 'axios';
+import {toast} from 'react-toastify';
 
 function Copyright(props) {
   return (
@@ -29,19 +31,29 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
   const navigate = useNavigate();
-  const handleSubmit = (event) => {
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+  
+    try {
+      const response = await axios.post("http://localhost:8090/admin/login", { userName, password });
+      if (response.status === 200) {
+        const userId = response.data._id; // Extract the user ID from response.data
+        toast.success('Login successful');
+        navigate(`/gehome/${userId}`); // Navigate to gehome with user ID
+      } else {
+        toast.error('Invalid username or password');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('An error occurred, please try again');
+    }
   };
 
   return (
@@ -88,6 +100,8 @@ export default function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -98,6 +112,8 @@ export default function SignInSide() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -109,7 +125,6 @@ export default function SignInSide() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                onClick={()=> navigate('/gehome')}
               >
                 Sign In
               </Button>

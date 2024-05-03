@@ -1,5 +1,4 @@
-
-import * as React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,6 +12,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Email } from '@mui/icons-material';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Copyright(props) {
   return (
@@ -32,13 +35,44 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+
+
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    userName: '',
+    password: '',
+    firstName: '',
+    lastName: ''
+  });
+
+  const { userName, password, firstName, lastName } = formData;
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }), () => {
+      console.log(formData); // Log the updated state after it's set
     });
+  };
+  
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formData)
+    try {
+      const response = await axios.post("http://localhost:8090/admin/add", formData);
+      if (response) { // Extract the user ID from response.data
+        toast.success('Registration successful');
+        navigate(`/signin`); // Navigate to gehome with user ID
+      } else {
+        toast.error('Invalid Inputs');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('An error occurred, please try again');
+    }
   };
 
   return (
@@ -70,6 +104,8 @@ export default function SignUp() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  value={firstName}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -80,6 +116,8 @@ export default function SignUp() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  value={lastName}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -88,8 +126,10 @@ export default function SignUp() {
                   fullWidth
                   id="email"
                   label="Email Address"
-                  name="email"
+                  name="userName"
                   autoComplete="email"
+                  value={userName}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -101,6 +141,8 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  value={password}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>

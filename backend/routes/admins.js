@@ -8,25 +8,24 @@ const bodyParser = require('body-parser');
 //Create User
 router.route("/add").post((req,res)=>{
 
-    const name = req.body.name;
-    
-    const email = req.body.email;
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
     const userName = req.body.userName;
     const password = req.body.password;
 
     const newAdmin = new Admin({
 
-        name,
-        email,
+      firstName,
+      lastName,
         userName,
         password
 
     })
 
     newAdmin.save().then(()=>{
-        res.json("New User Created")
+      res.status(200).send('New User Created')
     }).catch((err)=>{
-        console.log(err)
+      res.status(500).send('Internal server error');
     })
 
 })
@@ -115,7 +114,7 @@ router.post('/login', async (req, res) => {
   try {
     const user = await Admin.findOne({ userName: userName });
     if (user && user.password === password) {
-      res.send('Exist');
+      res.status(200).send(user); // Send user object if login is successful
     } else {
       res.status(401).send('Invalid username or password');
     }
@@ -124,5 +123,6 @@ router.post('/login', async (req, res) => {
     res.status(500).send('Internal server error');
   }
 });
+
 
 module.exports = router;

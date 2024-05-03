@@ -3,8 +3,7 @@ import Ge_Header from './Ge_Component/Ge_Header';
 import Ge_post from './Ge_post';
 import LabelBottomNavigation from '../../Components/bottom';
 import Ge_SideBar from './Ge_Component/Ge_SideBar';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+
 
 export default function Ge_Home() {
   const [activeButton, setActiveButton] = useState(null);
